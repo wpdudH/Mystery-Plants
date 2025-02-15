@@ -25,7 +25,7 @@ public class Query : ScriptableObject
         public List<TendencyChange>  TendencyChanges;
 
         // 선택에 따른 결과 반환
-        public Dictionary<string, int> GetTendencyChange(int index)
+        public Dictionary<string, int> GetTendencyChange()
         {
             Dictionary<string, int> TendencyDict = new Dictionary<string, int>();
             foreach (TendencyChange change in TendencyChanges)
