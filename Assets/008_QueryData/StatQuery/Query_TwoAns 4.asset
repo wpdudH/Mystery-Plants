@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed8efd13ee87fa42a59211f83393f33, type: 3}
-  m_Name: StatQuery1
+  m_Name: Query_TwoAns 4
   m_EditorClassIdentifier: 
-  questionText: "\uC21C\uAC04\uC778\uAC00 \uC601\uC6D0\uC778\uAC00?"
+  questionText: "\uC21C\uAC04\uC778\uAC00 \uC601\uC6D0\uC778\uAC00 2\uC9C0\uC120\uB2E4
+    \uC9C8\uBB38 4"
   choices:
   - choiceText: "\uC601\uC6D0"
     TendencyChanges:
     - tendencyName: Intelligent
       value: 1
-    - tendencyName: 
-      value: 0
     - tendencyName: Sweet
       value: 1
   - choiceText: "\uC21C\uAC04"

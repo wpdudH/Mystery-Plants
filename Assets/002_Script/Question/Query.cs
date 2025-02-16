@@ -32,6 +32,10 @@ public class Query : ScriptableObject
             {
                 TendencyDict[change.tendencyName] = change.value;
             }
+            if (TendencyDict == null)
+            {
+                Debug.Log("ø©±‚¿”");
+            }
             return TendencyDict;
         }
     }

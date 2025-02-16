@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, int> playerTendency = new Dictionary<string, int>()
     {
         {"Violent", 0},
-        {"Intelligence", 0},
+        {"Intelligent", 0},
         {"Sweet", 0},
         {"Madness", 0}
     };
