@@ -8,7 +8,7 @@ public class QueryManager : MonoBehaviour
     public List<Query> queryTwoAnsPool;
     public List<Query> queryFourAnsPool;
     public int queryCount;
-    public Text queryText;
+    public Transform queryPrefab;
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
     public GameObject interactableObject; // 클릭할 오브젝트
@@ -24,7 +24,7 @@ public class QueryManager : MonoBehaviour
         mainCamera = Camera.main;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        queryText.gameObject.SetActive(false);
+        queryPrefab.gameObject.SetActive(false);
         choicesContainer.gameObject.SetActive(false);
     }
 
@@ -50,7 +50,7 @@ public class QueryManager : MonoBehaviour
 
     void StartQuiz()
     {
-        queryText.gameObject.SetActive(true);
+        queryPrefab.gameObject.SetActive(true);
         choicesContainer.gameObject.SetActive(true);
 
         InitializeQuery();
@@ -107,7 +107,7 @@ public class QueryManager : MonoBehaviour
             currentQuery = queryFourAnsPool[currentQueryIndex];
         }
 
-        queryText.text = currentQuery.questionText;
+        queryPrefab.GetComponentInChildren<Text>().text = currentQuery.questionText;
 
         foreach(Transform child in choicesContainer)
         {
