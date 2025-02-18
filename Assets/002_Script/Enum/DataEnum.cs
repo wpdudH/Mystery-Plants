@@ -21,3 +21,11 @@ public enum ResourceType
     TimeBoost,
     HiddenItem
 }
+
+public enum ClickEvent
+{
+    Query,
+    Dictionary,
+    Shop,
+    Setting,
+}

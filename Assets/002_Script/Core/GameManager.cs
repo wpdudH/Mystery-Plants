@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,6 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public EnvironmentType selectedEnvironment;
+    //public List<EnvironmentData> environments;
+
+    private int maxScore = 0;
+
+    //Clickable Object Event Action
+    public event Action OnQueryStart;
+    public event Action OnDictionaryShow;
+    //Clickable Object의 이벤트 발생 가능 여부
+    private bool CanActEvent = true;
 
     private Dictionary<string, int> playerTendency = new Dictionary<string, int>()
     {
@@ -13,8 +24,6 @@ public class GameManager : MonoBehaviour
         {"Sweet", 0},
         {"Madness", 0}
     };
-
-   
 
     private void Awake()
     {
@@ -27,6 +36,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void SetSelectedEnvironment(EnvironmentType environment)
+    {
+        selectedEnvironment = environment;
+        Debug.Log("선택된 환경: " + environment);
     }
 
     public void ApplyTendencyChanges(Dictionary<string, int> tendencyChanges)
@@ -49,7 +64,7 @@ public class GameManager : MonoBehaviour
     // 환경 설정 메서드
     public void DetermineEnvironment()
     {
-        int maxScore = 0;
+        maxScore = 0;
 
         List<string> topTendencies = new List<string>();
 
@@ -66,5 +81,38 @@ public class GameManager : MonoBehaviour
                 topTendencies.Add(tendency.Key);
             }
         }
+    }
+
+    public int GetMaxTendencyScore()
+    {
+        return maxScore;
+    }
+
+    public void SetMaxTendencyScore(int score)
+    {
+        maxScore = score;
+    }
+
+    // 클릭되었을 때 실행 함수.
+    public void StartQuery(ClickEvent eventName)
+    {
+        if (!CanActEvent) return;
+
+        switch(eventName)
+        {
+            case ClickEvent.Query:
+                OnQueryStart?.Invoke();
+                CanActEvent = false;
+                break;
+            case ClickEvent.Dictionary:
+                OnDictionaryShow?.Invoke();
+                CanActEvent = false;
+                break;
+        }
+    }
+
+    public void EnableActEvent()
+    {
+        CanActEvent = true;
     }
 }

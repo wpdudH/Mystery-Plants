@@ -11,7 +11,6 @@ public class QueryManager : MonoBehaviour
     public Transform queryPrefab;
     public Transform choicesContainer;
     public GameObject choiceButtonPrefab;
-    public GameObject interactableObject; // 클릭할 오브젝트
 
     private int currentQueryIndex = 0;
     private List<Query> selectedQuerys = new List<Query>();
@@ -21,32 +20,10 @@ public class QueryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = Camera.main;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        GameManager.Instance.OnQueryStart += StartQuiz;
         queryPrefab.gameObject.SetActive(false);
         choicesContainer.gameObject.SetActive(false);
     }
-
-    private void Update()
-    {
-         if (Input.GetMouseButtonDown(0) && isQueryActive == false)
-         {
-             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-             RaycastHit hit;
-             if (Physics.Raycast(ray, out hit))
-             {
-                 Debug.Log("클릭한 오브젝트: " + hit.transform.name);
-
-                 if (hit.transform.gameObject == interactableObject)
-                 {
-                     StartQuiz();
-                 }
-             }
-         }
-    }
-
-
 
     void StartQuiz()
     {
@@ -92,6 +69,7 @@ public class QueryManager : MonoBehaviour
         if(currentQueryIndex >= queryCount)
         {
             Debug.Log("질의 종료");
+            GameManager.Instance.EnableActEvent();
             GameManager.Instance.LoadScene("SampleScene");
             return;
         }
