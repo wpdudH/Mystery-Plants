@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424ce9dae13894747840ea1e341d2cfd, type: 3}
+  m_Name: Bluelettuce
+  m_EditorClassIdentifier: 
+  flowerName: "\uD478\uB978 \uC591\uC0C1\uCD94"
+  env: 4
+  rarity: 0
+  description: "\uC73C\uC5D1 \uBA39\uAE30\uC2DC\uB7EC"
+  flowerImage: {fileID: 0}
+  flowerImageFrame: {fileID: 0}
+  isDiscovered: 0
