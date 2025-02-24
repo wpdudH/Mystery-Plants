@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424ce9dae13894747840ea1e341d2cfd, type: 3}
   m_Name: Mandrake
   m_EditorClassIdentifier: 
-  flowerName: 
-  env: 0
-  rarity: 0
-  description: 
-  flowerImage: {fileID: 0}
-  flowerImageFrame: {fileID: 0}
+  flowerName: "\uB9E8\uB4DC\uB808\uC774\uD06C"
+  env: 4
+  rarity: 1
+  description: "\uC73C\uC544\uC544\uC544\uC544\uC544\u3153\uC544\uC544\u3153\u314F\uC5B4\uB77C\uB354\u314F\uB7EC\u314F\uC5B4\uB784\u3134\u3139"
+  flowerImage: {fileID: 21300000, guid: 03cfa81c011cd204ebe8aea63d851c9d, type: 3}
+  flowerImageFrame: {fileID: 21300000, guid: cb9100eeb24074d43ad498cf58aac910, type: 3}
   isDiscovered: 0

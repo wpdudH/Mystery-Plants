@@ -16,6 +16,6 @@ MonoBehaviour:
   env: 4
   rarity: 0
   description: "\uC73C\uC5D1 \uBA39\uAE30\uC2DC\uB7EC"
-  flowerImage: {fileID: 0}
-  flowerImageFrame: {fileID: 0}
+  flowerImage: {fileID: 21300000, guid: 71b61471e65bb3b4f92842bef6fd95b2, type: 3}
+  flowerImageFrame: {fileID: 21300000, guid: c96681a296c2aea4aa4481a82ae520d6, type: 3}
   isDiscovered: 0
