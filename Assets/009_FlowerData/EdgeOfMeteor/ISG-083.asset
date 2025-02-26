@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 424ce9dae13894747840ea1e341d2cfd, type: 3}
-  m_Name: FlowerGirl
+  m_Name: ISG-083
   m_EditorClassIdentifier: 
-  flowerName: "\uAF43\uC21C\uC774"
-  env: 4
-  rarity: 3
-  description: "\uD5E4\uD5E4 \uAF43\uC21C\uC774\uB2E4"
-  flowerImage: {fileID: 21300000, guid: 3bff55c98d39ac54f90cd6ddce1ada38, type: 3}
-  flowerImageFrame: {fileID: 21300000, guid: 3bff55c98d39ac54f90cd6ddce1ada38, type: 3}
+  flowerName: ISG-083
+  env: 3
+  rarity: 1
+  description: "\uBC31\uCD08\uB871\uCD08\uB871\uCD08\uB871\uC774"
+  flowerImage: {fileID: 21300000, guid: 7cf4c712d22602543b7fa005a8c079a3, type: 3}
+  flowerImageFrame: {fileID: 21300000, guid: 7cf4c712d22602543b7fa005a8c079a3, type: 3}
   isDiscovered: 0

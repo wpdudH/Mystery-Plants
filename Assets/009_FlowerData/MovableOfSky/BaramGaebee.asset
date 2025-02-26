@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 424ce9dae13894747840ea1e341d2cfd, type: 3}
-  m_Name: FlowerGirl
+  m_Name: BaramGaebee
   m_EditorClassIdentifier: 
-  flowerName: "\uAF43\uC21C\uC774"
-  env: 4
-  rarity: 3
-  description: "\uD5E4\uD5E4 \uAF43\uC21C\uC774\uB2E4"
-  flowerImage: {fileID: 21300000, guid: 3bff55c98d39ac54f90cd6ddce1ada38, type: 3}
-  flowerImageFrame: {fileID: 21300000, guid: 3bff55c98d39ac54f90cd6ddce1ada38, type: 3}
+  flowerName: "\uBC14\uB78C\uAC1C\uBE44"
+  env: 2
+  rarity: 0
+  description: "\uBD84\uBA85 \uAF43\uC785\uB2C8\uB2E4."
+  flowerImage: {fileID: 21300000, guid: 279acf98b4a844f4ca371d34a6118fa3, type: 3}
+  flowerImageFrame: {fileID: 21300000, guid: 279acf98b4a844f4ca371d34a6118fa3, type: 3}
   isDiscovered: 0
