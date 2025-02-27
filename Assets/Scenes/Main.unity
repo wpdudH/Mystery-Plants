@@ -2365,7 +2365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e824614d37f54b4287d909fa8aeb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerDatabase: {fileID: 0}
+  flowerDatabase: {fileID: 11400000, guid: 6ede6b2f82972d54bbf1ad5502a21983, type: 2}
 --- !u!4 &816876663
 Transform:
   m_ObjectHideFlags: 0
@@ -3513,6 +3513,7 @@ MonoBehaviour:
   MovablesOfSkyBTN: {fileID: 1493864544}
   EdgeOfMeteorBTN: {fileID: 558398639}
   WitchesBackyardBTN: {fileID: 630012222}
+  NullImage: {fileID: 21300000, guid: 004881117d4df5c419f7b2c52f452658, type: 3}
   flowerContainer: {fileID: 1161822820}
   flowerThumbnailPrefab: {fileID: 6375860581282109575, guid: d23401394b9ca424da4eb2eef272384c, type: 3}
   flowerDetailContainer: {fileID: 636539820}
