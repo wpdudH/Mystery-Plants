@@ -70,7 +70,7 @@ public class QueryManager : MonoBehaviour
         {
             Debug.Log("질의 종료");
             GameManager.Instance.EnableActEvent();
-            GameManager.Instance.LoadScene("SampleScene");
+            GameManager.Instance.LoadScene("WitchsBackyard");
             return;
         }
 

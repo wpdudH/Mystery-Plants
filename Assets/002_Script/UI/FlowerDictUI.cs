@@ -10,6 +10,8 @@ public class FlowerDictUI : MonoBehaviour
     public Button EdgeOfMeteorBTN;
     public Button WitchesBackyardBTN;
 
+    public Sprite NullImage;
+
     public Transform flowerContainer;
     public GameObject flowerThumbnailPrefab;
     public Transform flowerDetailContainer;
@@ -35,17 +37,19 @@ public class FlowerDictUI : MonoBehaviour
 
         foreach(Transform child in flowerContainer)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
         foreach (Transform child in flowerDetailContainer)
         {
-            Destroy(child);
+            Destroy(child.gameObject);
         }
 
         List<FlowerData> flowers = FlowerDict.Instance.flowerDatabase.GetFlowersByEnvironment(envrionment);
 
        foreach(var flower in flowers)
        {
+            Debug.Log($"{flower.name}");
+
             GameObject flowerThumbnail = Instantiate(flowerThumbnailPrefab, flowerContainer);
             Image imageComponent = flowerThumbnail.GetComponent<Image>();
             Button buttonComponent = flowerThumbnail.GetComponent<Button>();
@@ -57,7 +61,7 @@ public class FlowerDictUI : MonoBehaviour
             }
             else
             {
-                imageComponent.sprite = null;
+                imageComponent.sprite = NullImage;
                 buttonComponent.onClick.AddListener(() => DisplayFlowerDetails(flower, true));
             }
        }
