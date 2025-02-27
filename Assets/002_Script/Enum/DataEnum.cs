@@ -6,7 +6,6 @@ public enum EnvironmentType
     EdgeOfMeteor,           //유성우의 끝자락
     WitchsBackyard          //마녀의 뒷마당
 }
-
 public enum FlowerRarity
 {
     Common,
